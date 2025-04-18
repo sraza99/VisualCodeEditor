@@ -1,10 +1,7 @@
 /* ⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️⚠️
 Database Load Issues (follow if receiving permission denied when running SQL code below)
 
-One of the errors I had was on read permission denied for csv file. So I went to file explorer
-and right-clicked the file and selected properties. Then I went to security tab and clicked add. I then
-entered Everyone is dialog box and clicked ok. clicked ok to save settings again. And then the 
-script ran successfully. 
+
 
 Possible Errors: 
 - ERROR >>  duplicate key value violates unique constraint "company_dim_pkey"
@@ -32,6 +29,10 @@ Possible Errors:
 \copy skills_job_dim FROM '[Insert File Path]/skills_job_dim.csv' WITH (FORMAT csv, HEADER true, DELIMITER ',', ENCODING 'UTF8');
 
 */
+/* One of the errors I had was on read permission denied for csv file. So I went to file explorer
+and right-clicked the file and selected properties. Then I went to security tab and clicked add. I then
+entered Everyone in dialog box and clicked ok. Clicked ok to save settings again. The 
+script ran successfully. */
 
 -- NOTE: This has been updated from the video to fix issues with encoding
 /*In video this script went something like this:
